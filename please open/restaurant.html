@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Select a Restaurant</h2>
+        <div class="options">
+            <div class="option" onclick="selectRestaurant('bestea')">
+                <img src="images/bestea.jpg" alt="Bestea">
+                <button class="restaurant-btn">Bestea</button>
+            </div>
+            <div class="option" onclick="selectRestaurant('jollibee')">
+                <img src="images/jollibee.png" alt="Jollibee">
+                <button class="restaurant-btn">Jollibee</button>
+            </div>
+            <div class="option" onclick="selectRestaurant('mcdo')">
+                <img src="images/mcdo.png" alt="McDonald's">
+                <button class="restaurant-btn">McDonald's</button>
+            </div>
+            <div class="option" onclick="selectRestaurant('kapepiliin')">
+                <img src="images/secret_cafe.png" alt="Kapepiliin">
+                <button class="restaurant-btn">Secret Cafe</button>
+            </div>
+        </div>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function selectRestaurant(restaurant) {
+            localStorage.setItem('selectedRestaurant', restaurant);
+            window.location.href = 'drinks.html'; // Redirect to drinks selection
+        }
+
+        function goBack() {
+            window.location.href = 'location.html'; // Redirect back to location selection
+        }
+    </script>
+</body>
+</html>

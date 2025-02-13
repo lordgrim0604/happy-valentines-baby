@@ -1,0 +1,189 @@
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #fff0f5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff66b2;
+  margin-top: 50px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.container {
+  margin-top: 100px;
+}
+
+select, button {
+  padding: 12px 20px;
+  margin: 15px 0;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+select {
+  background-color: #f8c2e0;
+  color: #ff66b2;
+  width: 70%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  background-color: #ff80c0;
+}
+
+button {
+  background-color: #ff66b2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3385;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+.container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffe6f1;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button {
+  margin: 20px 10px;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  background-color: #ff66b2;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #ff3385;
+}
+
+.heart-pump {
+  font-size: 2.5em;
+  color: #ff66b2;
+  margin-top: 100px;
+}
+
+h2 {
+  font-size: 2em;
+  color: #ff66b2;
+}
+
+p {
+  font-size: 1.5em;
+  color: #ff66b2;
+}
+
+strong {
+  color: #ff3385;
+}
+
+.restaurant-img {
+  width: 200px;  /* Fixed width */
+  height: 200px; /* Fixed height */
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 15px;
+  justify-content: center;
+}
+
+.option {
+  text-align: center;
+}
+
+.option img {
+  width: 100%;
+  max-width: 150px; /* Adjust for 2x2 layout */
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+button {
+  width: 100%;
+  max-width: 150px; /* Match image size */
+  padding: 10px;
+  font-size: 14px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.restaurant-img:hover {
+  transform: scale(1.05);
+}
+
+.option-btn {
+  display: block;
+  margin-top: 10px;
+  background-color: #ff99c8;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  width: 100%;
+}
+
+.option-btn:hover {
+  background-color: #ff6699;
+  transform: scale(1.05);
+}
+
+.dynamic-options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.next-btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.next-btn:hover {
+  background-color: #45a049;
+}
