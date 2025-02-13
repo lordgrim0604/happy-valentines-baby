@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Location</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Location</h1>
+        <div class="options">
+            <div class="option" onclick="selectLocation('My House')">
+                <button class="option-btn">My House</button>
+            </div>
+            <div class="option" onclick="selectLocation('Your House')">
+                <button class="option-btn">Your House</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle location selection and redirect to restaurant.html
+        function selectLocation(location) {
+            // Save the location choice to localStorage or sessionStorage if needed
+            localStorage.setItem('location', location);
+
+            // Redirect to restaurant.html
+            window.location.href = 'restaurant.html';
+        }
+    </script>
+</body>
+</html>

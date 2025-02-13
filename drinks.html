@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Drinks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Select Your Drink</h2>
+        <div class="options">
+            <div class="option" onclick="selectDrink('Don Mac')">
+                <img src="images/don_mac.png" alt="Don Mac">
+                <button class="drink-btn">Don Mac</button>
+            </div>
+            <div class="option" onclick="selectDrink('Tea Pop')">
+                <img src="images/tea_pop.jpg" alt="Tea Pop">
+                <button class="drink-btn">Tea Pop</button>
+            </div>
+        </div>
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function selectDrink(drink) {
+            localStorage.setItem('selectedDrink', drink);
+            window.location.href = 'dessert.html'; // Redirect to dessert selection
+        }
+
+        function goBack() {
+            window.location.href = 'restaurant.html'; // Redirect back to restaurant selection
+        }
+    </script>
+</body>
+</html>

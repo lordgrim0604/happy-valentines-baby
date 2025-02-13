@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Dessert</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Choose Your Dessert Place</h2>
+        
+        <div class="options">
+            <div class="option">
+                <img src="images/kapepiliin.png" alt="Kapepiliin">
+                <button onclick="selectDessert('Kapepiliin')">Kapepiliin</button>
+            </div>
+            <div class="option">
+                <img src="images/goldilocks.png" alt="Goldilocks">
+                <button onclick="selectDessert('Goldilocks')">Goldilocks</button>
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function selectDessert(dessert) {
+            localStorage.setItem("selectedDessert", dessert);
+            window.location.href = "last_location.html"; // Proceed to next page
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

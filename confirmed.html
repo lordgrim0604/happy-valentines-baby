@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmed Selections</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Confirmed Selections</h2>
+        
+        <div class="selection">
+            <h3>Location:</h3>
+            <p id="location"></p>
+        </div>
+
+        <div class="selection">
+            <h3>Restaurant:</h3>
+            <p id="restaurant"></p>
+        </div>
+
+        <div class="selection">
+            <h3>Drinks:</h3>
+            <p id="drinks"></p>
+        </div>
+
+        <div class="selection">
+            <h3>Dessert:</h3>
+            <p id="dessert"></p>
+        </div>
+
+        <div class="selection">
+            <h3>Final Destination:</h3>
+            <p id="finalLocation"></p>
+        </div>
+
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        // Retrieve selections from localStorage and display them
+        document.getElementById("location").textContent = localStorage.getItem("location") || "Not selected";
+        document.getElementById("restaurant").textContent = localStorage.getItem("restaurant") || "Not selected";
+        document.getElementById("drinks").textContent = localStorage.getItem("drinks") || "Not selected";
+        document.getElementById("dessert").textContent = localStorage.getItem("dessert") || "Not selected";
+        document.getElementById("finalLocation").textContent = localStorage.getItem("finalLocation") || "Not selected";
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Destination</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Last Activity</h2>
+        
+        <div class="options">
+            <div class="option">
+                <img src="images/stroll.jpg" alt="Stroll">
+                <button onclick="selectFinalLocation('Stroll')">Stroll</button>
+            </div>
+            <div class="option">
+                <img src="images/netflix.jpg" alt="Tambay">
+                <button onclick="selectFinalLocation('Tambay')">Tambay</button>
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function selectFinalLocation(location) {
+            localStorage.setItem("finalLocation", location);
+            window.location.href = "confirmed.html"; // Proceeds to confirmation page
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="heart-pump">Can you please be my valentine?</h1>
+    <div class="buttons">
+      <button id="yes">Yes</button>
+      <button id="no">No</button>
+    </div>
+  </div>
+
+  <script>
+    const heartPump = document.querySelector('.heart-pump');
+    let pumping = true;
+
+    setInterval(() => {
+      heartPump.style.transform = pumping ? 'scale(1.2)' : 'scale(1)';
+      pumping = !pumping;
+    }, 1000);
+
+    document.getElementById('yes').onclick = () => window.location.href = 'location.html';
+    document.getElementById('no').onclick = () => alert('Maybe next time!');
+  </script>
+</body>
+</html>
